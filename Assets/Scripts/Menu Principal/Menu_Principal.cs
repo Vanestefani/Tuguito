@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Principal :MonoBehaviour
 {
-   public void Btn_Play() {
+    public GameObject panelOpciones;
+    void Start()
+    {
+        // Esta es la línea mágica que apaga el panel al arrancar
+        panelOpciones.SetActive(false);
+    }
+    public void Btn_Play() {
 
         SceneManager.LoadScene("01-Demo");
         Debug.Log("Presionastes Jugar...");
