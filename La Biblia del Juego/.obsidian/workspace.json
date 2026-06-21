@@ -1,0 +1,309 @@
+{
+  "main": {
+    "id": "214ca3e8f1422a68",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8c006d72d6b0b1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7621b4b487389c20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Benchmarking/00-Benchmarking.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00-Benchmarking"
+            }
+          },
+          {
+            "id": "fbebc7f983428002",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_Visión General/02 - Hight Concept.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02 - Hight Concept"
+            }
+          },
+          {
+            "id": "ac72c5ca91594559",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Benchmarking/Juegos/MakeRoom.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MakeRoom"
+            }
+          },
+          {
+            "id": "9b5b4669917a89b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_Gameplay/13-Sistema de Guardado.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "13-Sistema de Guardado"
+            }
+          },
+          {
+            "id": "06a8a758f30aed55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vínculo Wireframe.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vínculo Wireframe"
+            }
+          },
+          {
+            "id": "e84c5dd9d06e37c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vínculo Wireframe.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vínculo Wireframe"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6af32eaf882767c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d56f2aa26f5a07e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8506206c973dfcfc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "812f642ee1f0a6cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "economi",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "da8f7d0fea620b24",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3e76db0b39de3fe7",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b1e17e422b6d641",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "15639cd18c998e68",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "00_Visión General/02 - Hight Concept.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 02 - Hight Concept"
+            }
+          },
+          {
+            "id": "bc0470d145be9336",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "00_Visión General/02 - Hight Concept.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de 02 - Hight Concept"
+            }
+          },
+          {
+            "id": "893d9599ed2d0d1f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "9736ce42cf6c148e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "72d13a453264df32",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00_Visión General/02 - Hight Concept.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 02 - Hight Concept"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+    }
+  },
+  "active": "e84c5dd9d06e37c3",
+  "lastOpenFiles": [
+    "Vínculo al Repositorio GitHu.md",
+    "Vínculo Wireframe.md",
+    "03_Gameplay/13-Sistema de Guardado.md",
+    "03_Gameplay/06-Economia.md",
+    "02_Narrativa/Mundo/01-Economía del Juego.md",
+    "04_Arte/00-Graficos.md",
+    "04_Arte/03-Personajes/Protagonistas/Calico/Vistas de diseño de Calicó.md",
+    "04_Arte/03-Personajes/Protagonistas/Tuguito/Vistas de diseño de tuguito.md",
+    "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
+    "04_Arte/UI/Dispositivos de Interfaz.md",
+    "01_Benchmarking/Juegos/Mecanicas cada juego.md",
+    "01_Benchmarking/Juegos/Among Us.md",
+    "99-Adjuntos/Pasted image 20260614001550.png",
+    "01_Benchmarking/01-Estado del arte y marco de referencias.md",
+    "00_Visión General/10-Modelo de Monetización.md",
+    "00_Visión General/00-Introducción.md",
+    "00_Visión General/01-Resumen del Juego.md",
+    "00_Visión General/02 - Hight Concept.md",
+    "00_Visión General/03-Inspiraciones.md",
+    "00_Visión General/04-Objetivo de producto.md",
+    "00_Visión General/05-Pilares de Gameplay.md",
+    "00_Visión General/06-Target Market.md",
+    "00_Visión General/07-Elevator Pitch.md",
+    "00_Visión General/09-Core loop.md",
+    "00_Visión General/08-Jugador.md",
+    "02_Narrativa/Historia/04-ACTO IV - Nudo II – La Redención.md",
+    "02_Narrativa/Historia/01-ACTO I- Planteamiento.md",
+    "99-Adjuntos/Pasted Image 20260620195435_413.png",
+    "99-Adjuntos/Pasted Image 20260620195429_575.png",
+    "99-Adjuntos/Pasted Image 20260620195304_520.png",
+    "99-Adjuntos/Pasted Image 20260620195016_600.png",
+    "99-Adjuntos/Pasted Image 20260620194952_826.png",
+    "99-Adjuntos/Pasted Image 20260620194930_861.png",
+    "99-Adjuntos/Pasted Image 20260620194651_582.png",
+    "99-Adjuntos/Pasted Image 20260620194550_827.png",
+    "99-Adjuntos/Pasted Image 20260620194456_674.png",
+    "03_Gameplay/00.Objetivos",
+    "04_Arte/00-Look & Feel",
+    "03_Gameplay/Controles",
+    "03_Gameplay/Progresión",
+    "03_Gameplay/Niveles",
+    "03_Gameplay/Mecánicas Principales",
+    "03_Gameplay/Sistemas/Misiones",
+    "03_Gameplay/Sistemas/Inventario",
+    "03_Gameplay/Sistemas/IA",
+    "03_Gameplay/Sistemas"
+  ]
+}

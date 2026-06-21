@@ -1,0 +1,1 @@
+El jugador controla a **Tuguito**, un perro optimista, creativo y trabajador que busca convertirse en el **Vendedor del Mes** de la tienda del Sr. Flamenco.

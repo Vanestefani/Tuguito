@@ -1,0 +1,3 @@
+# Elevator Pitch
+
+_[[Tuguito]]_ es un simulador de gestión y diseño de interiores en 3D donde los jugadores ayudan a un perro creativo y optimista a convertirse en el Vendedor del Mes. Combinando atención al cliente, remodelación de espacios y puzles derivados de sabotajes, el juego ofrece una experiencia acogedora que mezcla creatividad, estrategia y narrativa. Su propuesta destaca por integrar simulación, personalización y resolución de problemas en un entorno accesible y lleno de personajes memorables.

@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Tipo Arquetipo": "multitext",
+    "role": "multitext",
+    "Plataforma": "multitext",
+    "Genero": "multitext",
+    "Número de jugadores": "number",
+    "Idiomas compatibles": "multitext"
+  }
+}
