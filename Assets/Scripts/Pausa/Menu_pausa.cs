@@ -19,7 +19,7 @@ public class Menu_pausa : MonoBehaviour
 
     void Update()
     {
-        // 2. Modificamos el Input para usar el Nuevo Input System
+      
         if (Keyboard.current.pKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (Pausa == false)

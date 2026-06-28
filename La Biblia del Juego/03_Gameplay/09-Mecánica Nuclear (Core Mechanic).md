@@ -1,12 +1,46 @@
+La mecánica nuclear de _Tuguito_ consiste en **identificar las necesidades de los clientes, tomar decisiones éticas y ofrecer la mejor solución mediante la asesoría de productos o la remodelación de espacios**, administrando simultáneamente los recursos del jugador y la reputación del almacén.
+
+Este ciclo se repite durante toda la experiencia de juego y constituye la actividad principal del jugador.
+
+## Ciclo Principal de Juego
+
+[[09-Core loop]]
+
+## Mecanicas 
+
 El ecosistema de juego de _Tuguito_ se articula mediante una triada de sistemas interdependientes que transforman la gestión comercial en una experiencia narrativa profunda y estratégica.
 
 La jugabilidad se divide en los siguientes  tipos de interacciones principales:
 
+- **Movimiento del personaje**: El movimiento del jugador en _Tuguito_ se basa en un control libre en 3D utilizando el esquema **WASD**, con rotación de cámara mediante el mouse.
 - **Venta Asistida y Asesoría:** Identificar necesidades de los clientes y sugerir productos del catálogo real basándose en precio, calidad y confort.
 - **Simulador de Remodelación:** Uso de un **kit de remodelación** para diseñar propuestas creativas en las zonas de exhibición, buscando la máxima satisfacción del cliente.
 - **Sistema de Puzzles y Sabotajes:** Minijuegos contrarreloj (como organizar elementos o corregir etiquetas) que aparecen de forma aleatoria para mitigar las trampas de Calicó y evitar penalizaciones de dinero o reputación.
-- **Mecánica de diálogo ético:** Al interactuar con un cliente (NPC) durante la etapa de Venta Asistida y Asesoría, el jugador entrará en un árbol de decisión lineal o ramificado. Cada opción de respuesta reflejará un enfoque diferente:
+- **Mecánica de diálogo ético:** Al interactuar con un cliente (NPC) durante la etapa de Venta Asistida y Asesoría, el jugador entrará en un árbol de decisión lineal o ramificado. Cada opción de respuesta reflejará un enfoque diferente
 
+| Nombre de la Mecánica             | Variables Identificadas (Tipo y Nombre)                                                                       | Lógica Técnica / Pseudocódigo                                                                                                                                                                                                                                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Venta Asistida y Asesoría**     | `Cliente clienteActual`<br>`int reputacion`<br>`int coins`<br>`int experiencia`<br>`bool requisitosCompletos` | **Al interactuar con un cliente:**<br>MostrarDialogo();<br>Mientras `requisitosCompletos == false`:<br>→ RealizarPregunta();<br>→ GuardarRespuesta();<br>Si se identifican todas las necesidades:<br>→ MostrarCatalogo();<br>→ SeleccionarProducto();<br>→ EvaluarVenta();<br>→ Actualizar Coins, EXP y Reputación.      |
+| **Diálogo Ético**                 | `enum TipoDecision`<br>`int reputacion`<br>`int coins`<br>`int experiencia`                                   | **Al seleccionar una respuesta:**<br>Si `decision == Etica`:<br>→ `reputacion += 10`<br>→ `coins += 100`<br>→ `experiencia += 50`<br><br>Si `decision == Comercial`:<br>→ `reputacion -= 5`<br>→ `coins += 250`<br>→ `experiencia += 20`<br><br>Si `decision == Engañosa`:<br>→ `reputacion -= 15`<br>→ CancelarVenta(); |
+| **Simulador de Remodelación**     | `Habitacion habitacionActual`<br>`List<Mueble> mueblesSeleccionados`<br>`int presupuesto`<br>`int puntuacion` | **Al iniciar una remodelación:**<br>MostrarPlano();<br>ArrastrarMuebles();<br>RotarObjetos();<br>Al confirmar el diseño:<br>→ EvaluarPresupuesto();<br>→ EvaluarEstilo();<br>→ EvaluarCantidad();<br>→ CalcularPuntuacion();<br>→ OtorgarRecompensas();                                                                  |
+| **Sistema de Sabotajes y Puzles** | `bool sabotajeActivo`<br>`float tiempoRestante`<br>`int reputacion`<br>`int coins`                            | **Cuando ocurre un sabotaje:**<br>`sabotajeActivo = true`<br>IniciarTemporizador();<br>MostrarPuzzle();<br><br>Si el jugador resuelve el puzle antes del tiempo:<br>→ `coins += recompensa`<br><br>Si `tiempoRestante <= 0`:<br>→ `reputacion -= penalizacion`<br>→ `coins -= perdida`                                   |
+| **Investigación**                 | `int evidenciasEncontradas`<br>`bool videoEncontrado`<br>`bool pruebasCompletas`                              | **Al inspeccionar una zona:**<br>BuscarPistas();<br>Si encuentra una evidencia:<br>→ `evidenciasEncontradas++`<br>Si `evidenciasEncontradas == total`:<br>→ DesbloquearConfrontacionFinal();                                                                                                                             |
+| **Movimiento del Personaje**      | `float velocidadMovimiento`<br>`Vector3 direccion`                                                            | **Al presionar WASD:**<br>LeerEntrada();<br>MoverPersonaje(velocidadMovimiento);<br>RotarCamaraConMouse();                                                                                                                                                                                                               |
+| **Sistema de Reputación**         | `int reputacion`<br>`int nivelReputacion`                                                                     | **Al finalizar una actividad:**<br>ActualizarReputacion();<br>Si `reputacion >= requisito`:<br>→ DesbloquearClientesPremium();                                                                                                                                                                                           |
+| **Economía del Juego**            | `int coins`<br>`int experiencia`                                                                              | **Al completar una misión:**<br>`coins += recompensaCoins`<br>`experiencia += recompensaEXP`<br>GuardarProgreso();                                                                                                                                                                                                       |
+# Movimiento de personaje
+El movimiento del jugador en _Tuguito_ se basa en un control libre en 3D utilizando el esquema **WASD**, con rotación de cámara mediante el mouse.
+
+El sistema está diseñado para ser accesible y coherente con una experiencia cozy, por lo que:
+
+- El movimiento es **lento y relajado**, enfocado en la exploración y la interacción.
+- El desplazamiento es relativo a la cámara, permitiendo una navegación más intuitiva en espacios isométricos rotables.
+- Tuguito no cuenta con mecánicas de sprint ni aumentos temporales de velocidad.
+- El jugador solo puede caminar, sin saltos, carreras o acciones acrobáticas.
+
+La transición entre áreas del juego (tienda, barrio, casas de NPCs o escenas de remodelación) se realiza mediante **cambios de escena con pantalla de carga**, garantizando una separación clara entre espacios.
+
+El acceso a nuevas zonas del mundo está condicionado por el progreso del jugador, desbloqueándose progresivamente a medida que avanza la historia.
 ## Venta Asistida y Asesoría
 
 La Venta Asistida y Asesoría es una de las mecánicas principales de _Tuguito_. Su objetivo es simular el proceso de atención personalizada a clientes mediante la observación, el diálogo, la toma de decisiones éticas y el conocimiento del catálogo de productos.

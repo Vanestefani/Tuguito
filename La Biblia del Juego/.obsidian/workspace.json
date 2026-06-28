@@ -8,81 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7621b4b487389c20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Benchmarking/00-Benchmarking.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00-Benchmarking"
-            }
-          },
-          {
-            "id": "fbebc7f983428002",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_Visión General/02 - Hight Concept.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02 - Hight Concept"
-            }
-          },
-          {
-            "id": "ac72c5ca91594559",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Benchmarking/Juegos/MakeRoom.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MakeRoom"
-            }
-          },
-          {
-            "id": "9b5b4669917a89b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_Gameplay/13-Sistema de Guardado.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "13-Sistema de Guardado"
-            }
-          },
-          {
-            "id": "06a8a758f30aed55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Vínculo Wireframe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vínculo Wireframe"
-            }
-          },
-          {
             "id": "e84c5dd9d06e37c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+                "file": "01_Benchmarking/Juegos/Cats in Cozy Rooms.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cats in Cozy Rooms"
+            }
+          },
+          {
+            "id": "5a80d600c10e4ff9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Vínculo Wireframe.md",
                 "mode": "source",
                 "source": false
@@ -90,9 +34,23 @@
               "icon": "lucide-file",
               "title": "Vínculo Wireframe"
             }
+          },
+          {
+            "id": "fc06074ab5ea8ad1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "09-Mecánica Nuclear (Core Mechanic)"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -257,11 +215,35 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "e84c5dd9d06e37c3",
+  "active": "fc06074ab5ea8ad1",
   "lastOpenFiles": [
-    "Vínculo al Repositorio GitHu.md",
+    "00_Visión General/09-Core loop.md",
+    "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
+    "03_Gameplay/08-Menu de juego.md",
+    "03_Gameplay/07-Movimiento de personaje.md",
+    "03_Gameplay/11-Sistema de Guardado.md",
+    "03_Gameplay/1-Niveles.md",
+    "03_Gameplay/10-Ubicaciones.md",
+    "03_Gameplay/07-Interacción.md",
     "Vínculo Wireframe.md",
-    "03_Gameplay/13-Sistema de Guardado.md",
+    "01_Benchmarking/Juegos/Cats in Cozy Rooms.md",
+    "01_Benchmarking/Analisis Juegos mecanicas ui.excalidraw.md",
+    "99-Adjuntos/Pasted Image 20260621183532_886.png",
+    "99-Adjuntos/Pasted Image 20260621183453_076.png",
+    "99-Adjuntos/Pasted Image 20260621183432_300.png",
+    "99-Adjuntos/Pasted Image 20260621182741_509.png",
+    "99-Adjuntos/Pasted Image 20260621182652_966.png",
+    "99-Adjuntos/Pasted Image 20260621182631_877.png",
+    "99-Adjuntos/Pasted Image 20260621182614_975.png",
+    "01_Benchmarking/Juegos/Cat Cafe Manager.md",
+    "01_Benchmarking/Analisis Juegos mecanicas ui.canvas",
+    "99-Adjuntos/Pasted image 20260621181415.png",
+    "01_Benchmarking/Juegos/Sticky Business.md",
+    "01_Benchmarking/Juegos/Unpacking.md",
+    "01_Benchmarking/Juegos/Winkeltje The Little Shop.md",
+    "01_Benchmarking/01-Estado del arte y marco de referencias.md",
+    "01_Benchmarking/00-Lista de juegos.md",
+    "Vínculo al Repositorio GitHu.md",
     "03_Gameplay/06-Economia.md",
     "02_Narrativa/Mundo/01-Economía del Juego.md",
     "04_Arte/00-Graficos.md",
@@ -270,31 +252,8 @@
     "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
     "04_Arte/UI/Dispositivos de Interfaz.md",
     "01_Benchmarking/Juegos/Mecanicas cada juego.md",
-    "01_Benchmarking/Juegos/Among Us.md",
     "99-Adjuntos/Pasted image 20260614001550.png",
-    "01_Benchmarking/01-Estado del arte y marco de referencias.md",
-    "00_Visión General/10-Modelo de Monetización.md",
-    "00_Visión General/00-Introducción.md",
-    "00_Visión General/01-Resumen del Juego.md",
-    "00_Visión General/02 - Hight Concept.md",
-    "00_Visión General/03-Inspiraciones.md",
-    "00_Visión General/04-Objetivo de producto.md",
-    "00_Visión General/05-Pilares de Gameplay.md",
-    "00_Visión General/06-Target Market.md",
-    "00_Visión General/07-Elevator Pitch.md",
-    "00_Visión General/09-Core loop.md",
-    "00_Visión General/08-Jugador.md",
-    "02_Narrativa/Historia/04-ACTO IV - Nudo II – La Redención.md",
-    "02_Narrativa/Historia/01-ACTO I- Planteamiento.md",
     "99-Adjuntos/Pasted Image 20260620195435_413.png",
-    "99-Adjuntos/Pasted Image 20260620195429_575.png",
-    "99-Adjuntos/Pasted Image 20260620195304_520.png",
-    "99-Adjuntos/Pasted Image 20260620195016_600.png",
-    "99-Adjuntos/Pasted Image 20260620194952_826.png",
-    "99-Adjuntos/Pasted Image 20260620194930_861.png",
-    "99-Adjuntos/Pasted Image 20260620194651_582.png",
-    "99-Adjuntos/Pasted Image 20260620194550_827.png",
-    "99-Adjuntos/Pasted Image 20260620194456_674.png",
     "03_Gameplay/00.Objetivos",
     "04_Arte/00-Look & Feel",
     "03_Gameplay/Controles",
