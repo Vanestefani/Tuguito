@@ -7235,6 +7235,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd2c11ef14bf5e24198b01b40bec3c0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 137868856}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd2c11ef14bf5e24198b01b40bec3c0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 137868857}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd2c11ef14bf5e24198b01b40bec3c0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 137868860}
   m_SourcePrefab: {fileID: 100100000, guid: bd2c11ef14bf5e24198b01b40bec3c0a, type: 3}
 --- !u!1 &137868855 stripped
 GameObject:
@@ -7264,6 +7270,40 @@ CapsuleCollider:
   m_Height: 0.9751148
   m_Direction: 1
   m_Center: {x: 0, y: 0.50728035, z: 0}
+--- !u!114 &137868857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137868855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c210eafdeacfd640ba94c80a54f4bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
+--- !u!114 &137868860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137868855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281f35980085c0c468e4ddcde6502e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_MirarJugador_IK
+  player: {fileID: 522830486}
+  targetOffsetY: 0.5
+  rotarCuerpo: 1
+  velocidadGiroCuerpo: 3
+  pesoGeneral: 1
+  pesoCabeza: 0.8
+  pesoCuerpo: 0.3
+  limiteRotacion: 0.7
+  smoothSpeed: 5
+  activationRange: 8
 --- !u!1001 &142668407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10696,6 +10736,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370632907}
   m_CullTransparentMesh: 1
+--- !u!1 &378769411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d03f710018a7394795d197562ee94e9, type: 3}
+  m_PrefabInstance: {fileID: 2013081100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &378769412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378769411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c210eafdeacfd640ba94c80a54f4bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
+--- !u!136 &378769415
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378769411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.32
+  m_Height: 1.03
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &378769416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378769411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281f35980085c0c468e4ddcde6502e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_MirarJugador_IK
+  player: {fileID: 522830486}
+  targetOffsetY: 0.5
+  rotarCuerpo: 1
+  velocidadGiroCuerpo: 3
+  pesoGeneral: 1
+  pesoCabeza: 0.8
+  pesoCuerpo: 0.3
+  limiteRotacion: 0.7
+  smoothSpeed: 5
+  activationRange: 8
 --- !u!1001 &381940435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11576,8 +11678,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420392666}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000004146519, y: 0.9997675, z: 0.00000019223555, w: -0.021564977}
-  m_LocalPosition: {x: -27.653595, y: 5.773999, z: 27.657717}
+  m_LocalRotation: {x: 0.0000000018740198, y: 0.9998636, z: 0.00000011342896, w: -0.016519275}
+  m_LocalPosition: {x: -27.678507, y: 5.7739997, z: 27.65866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35988,6 +36090,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b74142e04865e1a4c831d5dc876d98c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1560041867}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b74142e04865e1a4c831d5dc876d98c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560041868}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b74142e04865e1a4c831d5dc876d98c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560041871}
   m_SourcePrefab: {fileID: 100100000, guid: b74142e04865e1a4c831d5dc876d98c1, type: 3}
 --- !u!1 &1560041866 stripped
 GameObject:
@@ -36017,6 +36125,40 @@ CapsuleCollider:
   m_Height: 0.77149534
   m_Direction: 1
   m_Center: {x: 0, y: 0.3951609, z: 0}
+--- !u!114 &1560041868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560041866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c210eafdeacfd640ba94c80a54f4bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
+--- !u!114 &1560041871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560041866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281f35980085c0c468e4ddcde6502e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_MirarJugador_IK
+  player: {fileID: 522830486}
+  targetOffsetY: 0.5
+  rotarCuerpo: 1
+  velocidadGiroCuerpo: 3
+  pesoGeneral: 1
+  pesoCabeza: 0.8
+  pesoCuerpo: 0.3
+  limiteRotacion: 0.7
+  smoothSpeed: 5
+  activationRange: 8
 --- !u!1 &1566459380
 GameObject:
   m_ObjectHideFlags: 0
@@ -37285,6 +37427,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95109e84dec529147b692234f47d144b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1601978119}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95109e84dec529147b692234f47d144b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1601978120}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95109e84dec529147b692234f47d144b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1601978123}
   m_SourcePrefab: {fileID: 100100000, guid: 95109e84dec529147b692234f47d144b, type: 3}
 --- !u!1 &1601978118 stripped
 GameObject:
@@ -37314,6 +37462,40 @@ CapsuleCollider:
   m_Height: 1.2230458
   m_Direction: 1
   m_Center: {x: 0, y: 0.60309243, z: -0.16411972}
+--- !u!114 &1601978120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601978118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c210eafdeacfd640ba94c80a54f4bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteractable
+--- !u!114 &1601978123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601978118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281f35980085c0c468e4ddcde6502e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_MirarJugador_IK
+  player: {fileID: 522830486}
+  targetOffsetY: 0.5
+  rotarCuerpo: 1
+  velocidadGiroCuerpo: 3
+  pesoGeneral: 1
+  pesoCabeza: 0.8
+  pesoCuerpo: 0.3
+  limiteRotacion: 0.7
+  smoothSpeed: 5
+  activationRange: 8
 --- !u!1 &1609150456
 GameObject:
   m_ObjectHideFlags: 0
@@ -38170,6 +38352,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07cd6559f65f00148b033c6a61a03535, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1612948655}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07cd6559f65f00148b033c6a61a03535, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1612948656}
   m_SourcePrefab: {fileID: 100100000, guid: 07cd6559f65f00148b033c6a61a03535, type: 3}
 --- !u!1 &1612948653 stripped
 GameObject:
@@ -38211,6 +38396,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c210eafdeacfd640ba94c80a54f4bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!114 &1612948656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612948653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281f35980085c0c468e4ddcde6502e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCLookAtPlayer
+  player: {fileID: 522830486}
+  targetOffsetY: 0.5
+  rotarCuerpo: 1
+  velocidadGiroCuerpo: 3
+  pesoGeneral: 1
+  pesoCabeza: 0.8
+  pesoCuerpo: 0.3
+  limiteRotacion: 0.7
+  smoothSpeed: 5
+  activationRange: 8
 --- !u!1001 &1613134853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48737,7 +48944,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d03f710018a7394795d197562ee94e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378769412}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d03f710018a7394795d197562ee94e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378769415}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d03f710018a7394795d197562ee94e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378769416}
   m_SourcePrefab: {fileID: 100100000, guid: 7d03f710018a7394795d197562ee94e9, type: 3}
 --- !u!1 &2014690448
 GameObject:
