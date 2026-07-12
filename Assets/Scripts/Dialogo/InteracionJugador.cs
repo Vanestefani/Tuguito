@@ -1,24 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+
 
 public class InteracionJugador : MonoBehaviour
 {
-   
+  
+    private IInteractable interactableAnterior;
     private void Update()
     {
      
         var teclado = Keyboard.current;
         var raton = Mouse.current;
         if (teclado == null || raton == null ) return;
+        IInteractable interactable = GetInteractableObject();
+        if (interactable != interactableAnterior)
+        {
+            interactableAnterior?.MostrarIndicador(false);
+            interactable?.MostrarIndicador(true);
+            interactableAnterior = interactable;
+        }
         if (teclado.eKey.wasPressedThisFrame || raton.rightButton.wasPressedThisFrame)
         {
-            IInteractable interactable = GetInteractableObject();
+
+           
             if (interactable != null)
             {
-                interactable.Interaccion(transform);
-                interactable.TerminarInteraccion(transform);
+                interactable?.Interaccion(transform);
             }
           
         }

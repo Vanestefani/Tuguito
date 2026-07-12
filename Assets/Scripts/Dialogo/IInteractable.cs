@@ -8,4 +8,5 @@ public interface IInteractable
     void Interaccion(Transform interactorTransform);
     void TerminarInteraccion(Transform interactorTransform);
     Transform GetInteractableTransform();
+    void MostrarIndicador(bool mostrar) { }
 }

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
+                "file": "02_Narrativa/Personajes/NPCs/Tanguy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09-Mecánica Nuclear (Core Mechanic)"
+              "title": "Tanguy"
             }
           }
         ],
@@ -217,8 +217,12 @@
   },
   "active": "fc06074ab5ea8ad1",
   "lastOpenFiles": [
-    "00_Visión General/09-Core loop.md",
+    "02_Narrativa/Personajes/NPCs/Lulu.md",
+    "02_Narrativa/Personajes/NPCs/Don flamenco.md",
+    "02_Narrativa/Personajes/Protagonistas/Calicó.md",
     "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
+    "02_Narrativa/Personajes/NPCs/Bernardo.md",
+    "00_Visión General/09-Core loop.md",
     "03_Gameplay/08-Menu de juego.md",
     "03_Gameplay/07-Movimiento de personaje.md",
     "03_Gameplay/11-Sistema de Guardado.md",
@@ -248,10 +252,6 @@
     "02_Narrativa/Mundo/01-Economía del Juego.md",
     "04_Arte/00-Graficos.md",
     "04_Arte/03-Personajes/Protagonistas/Calico/Vistas de diseño de Calicó.md",
-    "04_Arte/03-Personajes/Protagonistas/Tuguito/Vistas de diseño de tuguito.md",
-    "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
-    "04_Arte/UI/Dispositivos de Interfaz.md",
-    "01_Benchmarking/Juegos/Mecanicas cada juego.md",
     "99-Adjuntos/Pasted image 20260614001550.png",
     "99-Adjuntos/Pasted Image 20260620195435_413.png",
     "03_Gameplay/00.Objetivos",
