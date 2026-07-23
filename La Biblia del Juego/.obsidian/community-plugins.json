@@ -5,5 +5,6 @@
   "obsidian-excel-to-markdown-table",
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
-  "better-export-pdf"
+  "better-export-pdf",
+  "obsidian-pandoc"
 ]

@@ -4,53 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d8c006d72d6b0b1c",
+        "id": "ab234d541b6b9a57",
         "type": "tabs",
         "children": [
           {
-            "id": "e84c5dd9d06e37c3",
+            "id": "9b77f5d37ffcde2f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "01_Benchmarking/Juegos/Cats in Cozy Rooms.md",
-                "mode": "source",
-                "source": false
+                "file": "04_Arte/UI/Wireframe.md"
               },
-              "icon": "lucide-file",
-              "title": "Cats in Cozy Rooms"
-            }
-          },
-          {
-            "id": "5a80d600c10e4ff9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Vínculo Wireframe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vínculo Wireframe"
-            }
-          },
-          {
-            "id": "fc06074ab5ea8ad1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Narrativa/Personajes/NPCs/Tanguy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tanguy"
+              "icon": "excalidraw-icon",
+              "title": "Wireframe"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "economi",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,12 +184,31 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "fc06074ab5ea8ad1",
+  "active": "9b77f5d37ffcde2f",
   "lastOpenFiles": [
+    "Vínculo Wireframe.md",
+    "Vínculo al Repositorio GitHu.md",
+    "04_Arte/UI/Pantallas de Progresión y Reportes.md",
+    "04_Arte/UI/Wireframe.md",
+    "99-Adjuntos/Juego.png",
+    "99-Adjuntos/Juego-1.png",
+    "99-Adjuntos/interacción.png",
+    "99-Adjuntos/Sistema de dialogo.png",
+    "99-Adjuntos/Movimiento Personaje.png",
+    "99-Adjuntos/Mecanicas.png",
+    "99-Adjuntos/Menu_salir_hover_no.png",
+    "99-Adjuntos/Menu_salir_hover_si.png",
+    "99-Adjuntos/Menu_salir.png",
+    "99-Adjuntos/Pausa_Opciones_hover (1).png",
+    "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
+    "04_Arte/UI/Estilo Visual de la UI.md",
+    "04_Arte/UI/Dispositivos de Interfaz.md",
+    "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
+    "03_Gameplay/07-Interacción.md",
+    "02_Narrativa/Personajes/NPCs/Tanguy.md",
     "02_Narrativa/Personajes/NPCs/Lulu.md",
     "02_Narrativa/Personajes/NPCs/Don flamenco.md",
     "02_Narrativa/Personajes/Protagonistas/Calicó.md",
-    "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
     "02_Narrativa/Personajes/NPCs/Bernardo.md",
     "00_Visión General/09-Core loop.md",
     "03_Gameplay/08-Menu de juego.md",
@@ -228,32 +216,13 @@
     "03_Gameplay/11-Sistema de Guardado.md",
     "03_Gameplay/1-Niveles.md",
     "03_Gameplay/10-Ubicaciones.md",
-    "03_Gameplay/07-Interacción.md",
-    "Vínculo Wireframe.md",
     "01_Benchmarking/Juegos/Cats in Cozy Rooms.md",
     "01_Benchmarking/Analisis Juegos mecanicas ui.excalidraw.md",
-    "99-Adjuntos/Pasted Image 20260621183532_886.png",
-    "99-Adjuntos/Pasted Image 20260621183453_076.png",
-    "99-Adjuntos/Pasted Image 20260621183432_300.png",
-    "99-Adjuntos/Pasted Image 20260621182741_509.png",
-    "99-Adjuntos/Pasted Image 20260621182652_966.png",
-    "99-Adjuntos/Pasted Image 20260621182631_877.png",
-    "99-Adjuntos/Pasted Image 20260621182614_975.png",
     "01_Benchmarking/Juegos/Cat Cafe Manager.md",
     "01_Benchmarking/Analisis Juegos mecanicas ui.canvas",
-    "99-Adjuntos/Pasted image 20260621181415.png",
     "01_Benchmarking/Juegos/Sticky Business.md",
     "01_Benchmarking/Juegos/Unpacking.md",
     "01_Benchmarking/Juegos/Winkeltje The Little Shop.md",
-    "01_Benchmarking/01-Estado del arte y marco de referencias.md",
-    "01_Benchmarking/00-Lista de juegos.md",
-    "Vínculo al Repositorio GitHu.md",
-    "03_Gameplay/06-Economia.md",
-    "02_Narrativa/Mundo/01-Economía del Juego.md",
-    "04_Arte/00-Graficos.md",
-    "04_Arte/03-Personajes/Protagonistas/Calico/Vistas de diseño de Calicó.md",
-    "99-Adjuntos/Pasted image 20260614001550.png",
-    "99-Adjuntos/Pasted Image 20260620195435_413.png",
     "03_Gameplay/00.Objetivos",
     "04_Arte/00-Look & Feel",
     "03_Gameplay/Controles",

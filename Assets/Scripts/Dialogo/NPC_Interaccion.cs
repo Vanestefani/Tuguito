@@ -1,4 +1,5 @@
 using UnityEngine;
+
 [RequireComponent(typeof(Collider))]
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
@@ -12,13 +13,13 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     public GameObject indicadorInteraccion;
     private bool enDialogo = false;
     public DialogueCameraControl camaraDialogo;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         if (indicadorInteraccion != null)
             indicadorInteraccion.SetActive(false);
     }
- 
 
     public void Interaccion(UnityEngine.Transform interactorTransform)
     {
@@ -30,10 +31,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         }
         enDialogo = true;
         MostrarIndicador(false);
-       
-        Debug.Log("Hablar npc");
-       
-      
+
         if (camaraDialogo != null)
         {
             camaraDialogo.ActivateDialogueCamera(this.transform);
@@ -44,27 +42,28 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     public void TerminarInteraccion(UnityEngine.Transform interactorTransform)
     {
-
         enDialogo = false;
-        Debug.Log("Terminó de hablar el npc");
         animator.SetBool("Hablar", false);
         if (camaraDialogo != null)
         {
             camaraDialogo.DeactivateDialogueCamera(this.transform);
         }
-
     }
+
     public void MostrarIndicador(bool mostrar)
     {
         if (enDialogo) mostrar = false;
         if (indicadorInteraccion != null)
             indicadorInteraccion.SetActive(mostrar);
     }
+
     public UnityEngine.Transform GetInteractableTransform()
     {
         return transform;
     }
+
     public bool EstaEnDialogo() => enDialogo;
+
     public Sprite ObtenerRetrato(NPCEmocion emocion)
     {
         foreach (var retrato in retratos)
@@ -72,28 +71,32 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             if (retrato.emocion == emocion)
                 return retrato.sprite;
         }
-       
         return retratos.Length > 0 ? retratos[0].sprite : null;
     }
-    public int ObtenerReputacion()
+
+    // ---- Afinidad individual con este NPC (antes vivía en ReputacionManager) ----
+    public int ObtenerAfinidad()
     {
-        return ReputacionManager.Instance != null ? ReputacionManager.Instance.ObtenerReputacion(npcId) : 0;
+        return AfinidadManager.Instance != null ? AfinidadManager.Instance.ObtenerAfinidad(npcId) : 0;
     }
-    public void SumarReputacion(int cantidad)
+
+    public void SumarAfinidad(int cantidad)
     {
-        if (ReputacionManager.Instance != null)
-            ReputacionManager.Instance.SumarReputacion(npcId, cantidad);
+        if (AfinidadManager.Instance != null)
+            AfinidadManager.Instance.SumarAfinidad(npcId, cantidad);
     }
+
     public bool OpcionYaUsada(string idOpcion)
     {
-        return ReputacionManager.Instance != null && ReputacionManager.Instance.OpcionYaUsada(npcId, idOpcion);
+        return AfinidadManager.Instance != null && AfinidadManager.Instance.OpcionYaUsada(npcId, idOpcion);
     }
 
     public void MarcarOpcionUsada(string idOpcion)
     {
-        ReputacionManager.Instance?.MarcarOpcionUsada(npcId, idOpcion);
+        AfinidadManager.Instance?.MarcarOpcionUsada(npcId, idOpcion);
     }
 }
+
 [System.Serializable]
 public struct RetratoEmocion
 {

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
-
 {
     public static DialogueManager Instance { get; private set; }
     public GameObject panelDialogo;
@@ -13,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     public Image imagenRetrato;
     public Button[] botonesOpcion;
     public TMP_Text[] textosOpcion;
-   
+
     private NPCInteractable npcActual;
     private NodoDialogo nodoActual;
 
@@ -27,21 +26,19 @@ public class DialogueManager : MonoBehaviour
         if (panelDialogo != null)
             panelDialogo.SetActive(false);
     }
+
     public void IniciarDialogo(NPCInteractable npc)
     {
         npcActual = npc;
-    panelDialogo.SetActive(true);
-       Time.timeScale = 0;
+        panelDialogo.SetActive(true);
+        Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         if (textoNombre != null)
             textoNombre.text = npc.nombreVisible;
 
-
         MostrarNodo(npc.dialogoData.idNodoInicial);
-     
     }
-
 
     private void MostrarNodo(string idNodo)
     {
@@ -60,16 +57,23 @@ public class DialogueManager : MonoBehaviour
 
         MostrarOpciones();
     }
+
     private void MostrarOpciones()
     {
-        int afinidad = npcActual.ObtenerReputacion();
+        int afinidad = npcActual.ObtenerAfinidad();
+        int reputacionGlobal = ReputacionManager.Instance != null ? ReputacionManager.Instance.ObtenerReputacion() : 0;
+
         List<OpcionDialogo> opcionesVisibles = new List<OpcionDialogo>();
 
         foreach (var opcion in nodoActual.opciones)
         {
-            bool cumpleAfinidad = afinidad >= opcion.reputacionRequerida;
+            bool cumpleAfinidad = afinidad >= opcion.afinidadRequerida;
+            bool cumpleReputacion = reputacionGlobal >= opcion.reputacionGlobalRequerida;
             bool yaUsada = opcion.unaSolaVez && npcActual.OpcionYaUsada(opcion.idOpcion);
-            if (cumpleAfinidad && !yaUsada)
+            bool puedePagar = opcion.costoMonedas <= 0 ||
+                (EconomiaManager.Instance != null && EconomiaManager.Instance.PuedeComprar(opcion.costoMonedas));
+
+            if (cumpleAfinidad && cumpleReputacion && !yaUsada && puedePagar)
                 opcionesVisibles.Add(opcion);
         }
 
@@ -101,12 +105,28 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+
     private void SeleccionarOpcion(OpcionDialogo opcion)
     {
-        if (opcion.cambioreputacion != 0)
-            npcActual.SumarReputacion(opcion.cambioreputacion);
+        // Costo (si aplica) se cobra antes de dar recompensas
+        if (opcion.costoMonedas > 0)
+            EconomiaManager.Instance?.GastarMonedas(opcion.costoMonedas);
+
+        if (opcion.cambioAfinidad != 0)
+            npcActual.SumarAfinidad(opcion.cambioAfinidad);
+
+        if (opcion.cambioReputacionGlobal != 0)
+            ReputacionManager.Instance?.SumarReputacion(opcion.cambioReputacionGlobal);
+
+        if (opcion.experienciaGanada != 0)
+            ExperienciaManager.Instance?.GanarExperiencia(opcion.experienciaGanada);
+
+        if (opcion.monedasGanadas != 0)
+            EconomiaManager.Instance?.GanarMonedas(opcion.monedasGanadas);
+
         if (opcion.unaSolaVez)
             npcActual.MarcarOpcionUsada(opcion.idOpcion);
+
         if (string.IsNullOrEmpty(opcion.siguienteNodoId))
             CerrarDialogo();
         else
@@ -119,8 +139,6 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Debug.Log("Cerrando menu pausa...");
-       
 
         if (npcActual != null)
             npcActual.TerminarInteraccion(null);
@@ -128,6 +146,4 @@ public class DialogueManager : MonoBehaviour
         npcActual = null;
         nodoActual = null;
     }
-
-
 }

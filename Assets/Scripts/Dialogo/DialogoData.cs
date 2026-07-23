@@ -52,12 +52,15 @@ public class OpcionDialogo
     [TextArea(1, 3)]
     public string texto;
 
-  
+    public int afinidadRequerida = 0;
     public int reputacionRequerida = 0;
-
+    public int cambioAfinidad = 0;
     public int cambioreputacion = 0;
-
-  
+    public int experienciaGanada = 0;
+    public int monedasGanadas = 0;
+     public int reputacionGlobalRequerida = 0;
+       public int cambioReputacionGlobal = 0;
+        public int costoMonedas = 0;
     public string siguienteNodoId;
     public bool unaSolaVez = false;
     public string idOpcion;
