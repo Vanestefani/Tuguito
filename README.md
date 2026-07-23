@@ -3,6 +3,11 @@
 **Institución:** SENA  
 **Programa:** Tecnólogo en Desarrollo de Videojuegos y Entornos Interactivos  
 
+## Wireframe
+https://www.figma.com/proto/9Txfb4h0PDAhCakt2fjmBv/Tuguito?node-id=108-5&p=f&t=5GyuwvXdanrGgmgy-1&scaling=scale-down&content-scaling=fixed&page-id=108%3A2&starting-point-node-id=108%3A5&show-proto-sidebar=1
+
+## Ejecutable
+https://vanestefani.itch.io/tuguito
 ---
 
 ## 🎯 Descripción General
