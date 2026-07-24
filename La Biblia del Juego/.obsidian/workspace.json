@@ -11,12 +11,14 @@
             "id": "9b77f5d37ffcde2f",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "04_Arte/UI/Wireframe.md"
+                "file": "00_Visión General/09-Core loop.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Wireframe"
+              "icon": "lucide-file",
+              "title": "09-Core loop"
             }
           }
         ]
@@ -186,10 +188,17 @@
   },
   "active": "9b77f5d37ffcde2f",
   "lastOpenFiles": [
-    "Vínculo Wireframe.md",
-    "Vínculo al Repositorio GitHu.md",
-    "04_Arte/UI/Pantallas de Progresión y Reportes.md",
+    "00_Visión General/08-Jugador.md",
+    "00_Visión General/10-Modelo de Monetización.md",
+    "00_Visión General/07-Elevator Pitch.md",
+    "00_Visión General/09-Core loop.md",
+    "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
     "04_Arte/UI/Wireframe.md",
+    "Vínculo Wireframe.md",
+    "04_Arte/UI/Estilo Visual de la UI.md",
+    "04_Arte/UI/Dispositivos de Interfaz.md",
+    "04_Arte/UI/Pantallas de Progresión y Reportes.md",
+    "Vínculo al Repositorio GitHu.md",
     "99-Adjuntos/Juego.png",
     "99-Adjuntos/Juego-1.png",
     "99-Adjuntos/interacción.png",
@@ -200,9 +209,6 @@
     "99-Adjuntos/Menu_salir_hover_si.png",
     "99-Adjuntos/Menu_salir.png",
     "99-Adjuntos/Pausa_Opciones_hover (1).png",
-    "04_Arte/UI/Interfaces Especializadas de Gameplay.md",
-    "04_Arte/UI/Estilo Visual de la UI.md",
-    "04_Arte/UI/Dispositivos de Interfaz.md",
     "03_Gameplay/09-Mecánica Nuclear (Core Mechanic).md",
     "03_Gameplay/07-Interacción.md",
     "02_Narrativa/Personajes/NPCs/Tanguy.md",
@@ -210,7 +216,6 @@
     "02_Narrativa/Personajes/NPCs/Don flamenco.md",
     "02_Narrativa/Personajes/Protagonistas/Calicó.md",
     "02_Narrativa/Personajes/NPCs/Bernardo.md",
-    "00_Visión General/09-Core loop.md",
     "03_Gameplay/08-Menu de juego.md",
     "03_Gameplay/07-Movimiento de personaje.md",
     "03_Gameplay/11-Sistema de Guardado.md",
@@ -220,9 +225,6 @@
     "01_Benchmarking/Analisis Juegos mecanicas ui.excalidraw.md",
     "01_Benchmarking/Juegos/Cat Cafe Manager.md",
     "01_Benchmarking/Analisis Juegos mecanicas ui.canvas",
-    "01_Benchmarking/Juegos/Sticky Business.md",
-    "01_Benchmarking/Juegos/Unpacking.md",
-    "01_Benchmarking/Juegos/Winkeltje The Little Shop.md",
     "03_Gameplay/00.Objetivos",
     "04_Arte/00-Look & Feel",
     "03_Gameplay/Controles",
