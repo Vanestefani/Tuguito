@@ -11,6 +11,7 @@ public class Menu_Principal :MonoBehaviour
     {
         // Esta es la línea mágica que apaga el panel al arrancar
         panelOpciones.SetActive(false);
+        Cursor.visible = true;
     }
     public void Btn_Play() {
 

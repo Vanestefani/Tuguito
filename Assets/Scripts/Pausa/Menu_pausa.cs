@@ -58,6 +58,10 @@ public class Menu_pausa : MonoBehaviour
 
     public void Btn_Menu()
     {
+        Pausa = false;
+        Time.timeScale = 1;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("0-Menu principal");
         Debug.Log("Presionastes menu...");
     }
