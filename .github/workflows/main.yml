@@ -1,0 +1,50 @@
+name: Sincronizar Biblia del Juego con Wiki
+
+# 1. ¿Cuándo se ejecuta? Cuando haces push a 'main' y solo si hay cambios en la carpeta
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'La Biblia del Juego/**'
+
+# 2. Dar permisos para que el bot pueda escribir en el repositorio
+permissions:
+  contents: write
+
+# 3. ¿Qué pasos va a realizar?
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio principal
+        uses: actions/checkout@v4
+        with:
+          path: main-repo
+
+      - name: Descargar el repositorio de la Wiki
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki-repo
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copiar archivos y enviar a la Wiki
+        run: |
+          # Copiar todo el contenido de la carpeta a la raíz de la Wiki
+          # Se usan barras invertidas (\) para manejar los espacios en el nombre de la carpeta
+          cp -R main-repo/La\ Biblia\ del\ Juego/* wiki-repo/
+          
+          # Entrar a la Wiki y configurar el bot de Git
+          cd wiki-repo
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          
+          # Agregar los cambios
+          git add .
+          
+          # Revisar si hay cambios reales para evitar errores si la carpeta está igual
+          git diff-index --quiet HEAD || git commit -m "Sincronización automática desde La Biblia del Juego"
+          
+          # Hacer push a la Wiki
+          git push
