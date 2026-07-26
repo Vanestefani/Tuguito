@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // <-- 1. Añade esto aquí arriba
+using UnityEngine.InputSystem; 
 
 public class Menu_pausa : MonoBehaviour
 {
@@ -45,8 +45,9 @@ public class Menu_pausa : MonoBehaviour
         Panel_pausa.SetActive(false);
         Panel_Salir.SetActive(false);
         Time.timeScale = 1;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+    bool visorAbierto = Visorletreroui.Instancia != null && Visorletreroui.Instancia.EstaAbierto;
+    Cursor.visible = visorAbierto;
+    Cursor.lockState = visorAbierto ? CursorLockMode.None : CursorLockMode.Locked;
         Debug.Log("Cerrando menu pausa...");
     }
 

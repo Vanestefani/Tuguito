@@ -142,12 +142,12 @@ TextureImporter:
       name: Portraits_Calico_Coqueto_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 157
-        height: 138
+        width: 231
+        height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 657d5ee0d84f94445b4e63a8c55192d0
     internalID: 0
     vertices: []
     indices: 

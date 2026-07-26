@@ -12,15 +12,11 @@ public class Config_Resolucion : MonoBehaviour
 
     void Start()
     {
-        // 1. Configurar Pantalla Completa Inicial
+    
         int pantallaCompletaGuardada = PlayerPrefs.GetInt("PantallaCompleta", 1);
         bool esFullscreen = (pantallaCompletaGuardada == 1);
         toggleFullscreen.SetIsOnWithoutNotify(esFullscreen);
-
-        // 2. Cargar y Filtrar las Resoluciones del Monitor
         ConfigurarMenuResoluciones();
-
-        // 3. Escuchar los cambios de la UI de forma automática
         toggleFullscreen.onValueChanged.AddListener(CambiarPantallaCompleta);
         dropdownResoluciones.onValueChanged.AddListener(CambiarResolucion);
     }
@@ -33,11 +29,9 @@ public class Config_Resolucion : MonoBehaviour
         List<string> opcionesTexto = new List<string>();
         listaResolucionesFiltradas.Clear();
 
-        // Filtrar duplicados de Hercios (Hz) para dejar solo Width x Height limpias
         for (int i = 0; i < todasLasResoluciones.Length; i++)
         {
-            // Solo nos interesan las opciones que tengan una tasa de refresco nativa o común
-            // (Evitamos añadir la misma resolución repetida varias veces)
+          
             bool yaExiste = false;
             foreach (Resolution res in listaResolucionesFiltradas)
             {
@@ -58,7 +52,7 @@ public class Config_Resolucion : MonoBehaviour
 
         dropdownResoluciones.AddOptions(opcionesTexto);
 
-        // Buscar qué índice corresponde a la resolución actual para inicializar bien el menú
+        
         int indiceResolucionActual = 0;
         for (int i = 0; i < listaResolucionesFiltradas.Count; i++)
         {
@@ -69,8 +63,7 @@ public class Config_Resolucion : MonoBehaviour
             }
         }
 
-        // Si el usuario ya había guardado una resolución antes, usamos esa.
-        // Si no (da -1), usamos la resolución actual que acabamos de detectar.
+      
         int indiceGuardado = PlayerPrefs.GetInt("numeroResolucion", -1);
         if (indiceGuardado != -1 && indiceGuardado < listaResolucionesFiltradas.Count)
         {
@@ -80,7 +73,6 @@ public class Config_Resolucion : MonoBehaviour
         dropdownResoluciones.SetValueWithoutNotify(indiceResolucionActual);
         dropdownResoluciones.RefreshShownValue();
 
-        // Aplicamos la resolución cargada por primera vez
         AplicarCambiosDePantalla(indiceResolucionActual, Screen.fullScreen);
     }
 

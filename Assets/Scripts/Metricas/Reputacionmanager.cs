@@ -10,7 +10,7 @@ public class ReputacionManager : MonoBehaviour
 
     [Header("Rango de reputación")]
     public int reputacionMinima = 0;
-    public int reputacionMaxima = 1000;
+    public int reputacionMaxima = 100;
 
     [SerializeField] private int reputacionActual = 0;
 
@@ -32,9 +32,13 @@ public class ReputacionManager : MonoBehaviour
     public int SumarReputacion(int cantidad)
     {
         int anterior = reputacionActual;
+        Debug.Log("reputacion anterior" + anterior);
+
         reputacionActual = Mathf.Clamp(reputacionActual + cantidad, reputacionMinima, reputacionMaxima);
         OnReputacionCambiada?.Invoke(anterior, reputacionActual);
+        Debug.Log("reputacion Actual" + reputacionActual);
         return reputacionActual;
+        
     }
 
     public void EstablecerReputacion(int valor)

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,13 +7,12 @@ public class Menu_Principal :MonoBehaviour
     public GameObject panelOpciones;
     void Start()
     {
-        // Esta es la línea mágica que apaga el panel al arrancar
         panelOpciones.SetActive(false);
         Cursor.visible = true;
     }
     public void Btn_Play() {
 
-        SceneManager.LoadScene("01-Demo");
+        SceneManager.LoadScene("01-inicio");
         Debug.Log("Presionastes Jugar...");
     }
     public void Btn_Quit()

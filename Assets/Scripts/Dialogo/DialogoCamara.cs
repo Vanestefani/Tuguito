@@ -24,7 +24,7 @@ public class DialogueCameraControl : MonoBehaviour
             Weight = npcWeight,
             Radius = npcRadius
         });
-        Debug.Log(targetGroup);
+      
         if (inputCamara != null)
         {
             inputCamara.enabled = false;
@@ -39,7 +39,7 @@ public class DialogueCameraControl : MonoBehaviour
         JuegoCamera.Priority = 0;
         dialogueCamera.Priority = 100;
 
-        Debug.Log(dialogueCamera.Priority);
+       
     }
     public void DeactivateDialogueCamera(Transform npcTransform)
     { 
@@ -67,7 +67,6 @@ public class DialogueCameraControl : MonoBehaviour
                 break;
             }
         }
-        Debug.Log(targetGroup);
-        Debug.Log(dialogueCamera.Priority);
+
     }
 }

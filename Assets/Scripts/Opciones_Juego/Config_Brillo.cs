@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 public class Config_Brillo : MonoBehaviour
 {
     public Slider sliderBrillo;
-    public Volume volumenGlobal; // Arrastra aquí tu Global Volume
+    public Volume volumenGlobal; 
     private LiftGammaGain effect_LiftGammaGain;
     void Start()
     {

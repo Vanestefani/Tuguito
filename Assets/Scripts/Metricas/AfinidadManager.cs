@@ -14,7 +14,7 @@ public class AfinidadManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
             return;
         }
         Instance = this;
@@ -22,11 +22,13 @@ public class AfinidadManager : MonoBehaviour
 
     public int ObtenerAfinidad(string npcId)
     {
+        if (string.IsNullOrEmpty(npcId)) return 0;
         return afinidades.TryGetValue(npcId, out int valor) ? valor : 0;
     }
 
     public int SumarAfinidad(string npcId, int cantidad)
     {
+        if (string.IsNullOrEmpty(npcId)) return 0;
         int actual = ObtenerAfinidad(npcId);
         int nuevo = Mathf.Clamp(actual + cantidad, afinidadMinima, afinidadMaxima);
         afinidades[npcId] = nuevo;
@@ -36,13 +38,13 @@ public class AfinidadManager : MonoBehaviour
 
     public bool OpcionYaUsada(string npcId, string idOpcion)
     {
-        if (string.IsNullOrEmpty(idOpcion)) return false;
+        if (string.IsNullOrEmpty(npcId) || string.IsNullOrEmpty(idOpcion)) return false;
         return opcionesUsadas.TryGetValue(npcId, out var usadas) && usadas.Contains(idOpcion);
     }
 
     public void MarcarOpcionUsada(string npcId, string idOpcion)
     {
-        if (string.IsNullOrEmpty(idOpcion)) return;
+        if (string.IsNullOrEmpty(npcId) || string.IsNullOrEmpty(idOpcion)) return;
 
         if (!opcionesUsadas.TryGetValue(npcId, out var usadas))
         {
@@ -54,10 +56,17 @@ public class AfinidadManager : MonoBehaviour
 
     // ---------- Guardado / Carga (JSON con JsonUtility) ----------
     [Serializable]
+    public class OpcionesUsadasNPC
+    {
+        public string npcId;
+        public List<string> ids = new List<string>();
+    }
+    [Serializable]
     public class AfinidadGuardada
     {
         public List<string> npcIds = new List<string>();
         public List<int> valores = new List<int>();
+        public List<OpcionesUsadasNPC> opcionesUsadas = new List<OpcionesUsadasNPC>();
     }
 
     public AfinidadGuardada ExportarDatos()
@@ -69,13 +78,20 @@ public class AfinidadManager : MonoBehaviour
             datos.valores.Add(kvp.Value);
         }
         return datos;
+        foreach (var kvp in opcionesUsadas)
+            datos.opcionesUsadas.Add(new OpcionesUsadasNPC { npcId = kvp.Key, ids = new List<string>(kvp.Value) });
+        return datos;
     }
 
     public void ImportarDatos(AfinidadGuardada datos)
     {
         afinidades.Clear();
+        opcionesUsadas.Clear();
         if (datos == null) return;
         for (int i = 0; i < datos.npcIds.Count; i++)
             afinidades[datos.npcIds[i]] = datos.valores[i];
+        if (datos.opcionesUsadas != null)  
+            foreach (var o in datos.opcionesUsadas)
+                opcionesUsadas[o.npcId] = new HashSet<string>(o.ids);
     }
 }

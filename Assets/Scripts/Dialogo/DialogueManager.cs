@@ -61,14 +61,14 @@ public class DialogueManager : MonoBehaviour
     private void MostrarOpciones()
     {
         int afinidad = npcActual.ObtenerAfinidad();
-        int reputacionGlobal = ReputacionManager.Instance != null ? ReputacionManager.Instance.ObtenerReputacion() : 0;
+        int reputacion = ReputacionManager.Instance != null ? ReputacionManager.Instance.ObtenerReputacion() : 0;
 
         List<OpcionDialogo> opcionesVisibles = new List<OpcionDialogo>();
 
         foreach (var opcion in nodoActual.opciones)
         {
             bool cumpleAfinidad = afinidad >= opcion.afinidadRequerida;
-            bool cumpleReputacion = reputacionGlobal >= opcion.reputacionGlobalRequerida;
+            bool cumpleReputacion = reputacion >= opcion.reputacionRequerida;
             bool yaUsada = opcion.unaSolaVez && npcActual.OpcionYaUsada(opcion.idOpcion);
             bool puedePagar = opcion.costoMonedas <= 0 ||
                 (EconomiaManager.Instance != null && EconomiaManager.Instance.PuedeComprar(opcion.costoMonedas));
@@ -115,18 +115,10 @@ public class DialogueManager : MonoBehaviour
         if (opcion.cambioAfinidad != 0)
             npcActual.SumarAfinidad(opcion.cambioAfinidad);
 
-        if (opcion.cambioReputacionGlobal != 0)
-            ReputacionManager.Instance?.SumarReputacion(opcion.cambioReputacionGlobal);
-
-        if (opcion.experienciaGanada != 0)
-            ExperienciaManager.Instance?.GanarExperiencia(opcion.experienciaGanada);
-
-        if (opcion.monedasGanadas != 0)
-            EconomiaManager.Instance?.GanarMonedas(opcion.monedasGanadas);
-
+        if (opcion.cambioreputacion != 0)
+            ReputacionManager.Instance?.SumarReputacion(opcion.cambioreputacion);
         if (opcion.unaSolaVez)
             npcActual.MarcarOpcionUsada(opcion.idOpcion);
-
         if (string.IsNullOrEmpty(opcion.siguienteNodoId))
             CerrarDialogo();
         else

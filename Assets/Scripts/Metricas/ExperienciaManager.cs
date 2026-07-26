@@ -25,11 +25,13 @@ public class ExperienciaManager : MonoBehaviour
     public void GanarExperiencia(int cantidad)
     {
         if (cantidad <= 0) return;
-
+      
         int anterior = experienciaActual;
+        Debug.Log("experiencia anterior" + anterior);
         experienciaActual += cantidad;
         OnExperienciaGanada?.Invoke(cantidad);
         OnExperienciaCambiada?.Invoke(anterior, experienciaActual);
+        Debug.Log("experiencia Actual" + experienciaActual);
     }
 
     [Serializable]
