@@ -1,0 +1,46 @@
+## 📋 Tarea
+
+### 📝 Descripción
+
+Describe brevemente qué se necesita hacer y por qué.
+
+### 🎯 Objetivo
+
+¿Qué resultado esperamos obtener al completar esta tarea?
+
+### ✅ Criterios de aceptación
+
+* [ ] La tarea está implementada.
+* [ ] Se verificó que funciona correctamente.
+* [ ] Se realizaron las pruebas necesarias.
+* [ ] La documentación fue actualizada, si aplica.
+
+### 🔧 Tareas / Pasos
+
+* [ ]
+* [ ]
+* [ ]
+
+### 🚦 Prioridad
+
+* [ ] 🔴 Alta
+* [ ] 🟡 Media
+* [ ] 🟢 Baja
+
+### 👤 Responsable
+
+Asignar a: `@usuario`
+
+### 🏷️ Etiquetas
+
+`bug` / `feature` / `documentation` / `enhancement` / `task`
+
+### 📌 Notas
+
+Información adicional, dependencias, enlaces o consideraciones importantes.
+
+### 🔗 Referencias
+
+* Issue relacionada:
+* Pull Request:
+* Documentación:
